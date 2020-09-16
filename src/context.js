@@ -22,7 +22,7 @@ class ProductProvider extends Component {
            const singleItem = {...item};
            tempProducts = [...tempProducts,singleItem]
        })
-       
+
        this.setState(()=>{
            return {products : tempProducts}
        })
@@ -33,8 +33,8 @@ class ProductProvider extends Component {
    }
 
    
-   addToCart = () =>{
-    console.log("hello from add to Cart")
+   addToCart = (id) =>{
+    console.log(`hello from add to Cart id is${id}`)
 }
 
 
