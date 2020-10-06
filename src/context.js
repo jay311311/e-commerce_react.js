@@ -7,11 +7,11 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
    state={
-       products:[],
-       detailProduct:detailProduct,
-       cart:[],
-       modalOpen:false,
-       modalProduct:detailProduct,
+        products:[],
+        detailProduct:detailProduct,
+        cart:[],
+        modalOpen:false,
+        modalProduct:detailProduct,
         cartSubTotal:0,
         cartTax:0,
         cartTotal:0
@@ -92,6 +92,7 @@ class ProductProvider extends Component {
             this.addTotals();
         })
     }
+    
     decrement = (id) => {
         let tempCart = [...this.state.cart];
         const selectedProduct = tempCart.find(item=>item.id === id);
@@ -109,12 +110,8 @@ class ProductProvider extends Component {
         
 
         this.setState(()=>{
-            return{ 
-                cart:[...tempCart]
-                }
-        },()=>{
-            this.addTotals();
-        })
+            return{  cart:[...tempCart]}
+        },()=>{ this.addTotals();})
 
     }
 
