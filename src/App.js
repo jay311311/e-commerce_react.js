@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter as Router,Switch, Route} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./compoenets/Navbar"
@@ -11,7 +11,7 @@ import Modal from "./compoenets/Modal"
 
 function App() {
   return (
-    <Router>
+    <React.Fragment>
       <Navbar/>
       <Switch>
         <Route path="/" exact component={ProductList}/>
@@ -21,7 +21,7 @@ function App() {
       </Switch>
     <Modal/>
 
-    </Router>
+    </React.Fragment>
 
   );
 }
